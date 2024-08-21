@@ -5,7 +5,7 @@ from base_caching import BaseCaching
 
 
 class FIFOCache(BaseCaching):
-    """Object that stroes and retrieves items from 
+    """Object that stroes and retrieves items from
        a dictionary utilizing the FIFO removal mechanism
        when the cache storage limit is reached.
     """
