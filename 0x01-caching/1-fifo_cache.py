@@ -5,6 +5,10 @@ from base_caching import BaseCaching
 
 
 class FIFOCache(BaseCaching):
+    """Object that stroes and retrieves items from 
+       a dictionary utilizing the FIFO removal mechanism
+       when the cache storage limit is reached.
+    """
     def __init__(self):
         """initialize derived class"""
         super().__init__()
