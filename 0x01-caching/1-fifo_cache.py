@@ -29,7 +29,5 @@ class FIFOCache(BaseCaching):
                 print("DISCARD:", deleted_key)
 
     def get(self, key):
-        if key is None or key not in self.cache_data:
-            return None
-
-        return self.cache_data.get(key)
+        """Retrieves an item based on the key"""
+        return self.cache_data.get(key, None)
