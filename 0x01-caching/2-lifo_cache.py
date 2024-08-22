@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """ LIFO Caching System"""
 
-from base_caching import BaseCaching
 from collections import OrderedDict
+from base_caching import BaseCaching
 
 
 class LIFOCache(BaseCaching):
-    """Object that stroes and retrieves items from
+    """Object that stores and retrieves items from
        a dictionary utilizing the FIFO removal mechanism
        when the cache storage limit is reached.
     """
