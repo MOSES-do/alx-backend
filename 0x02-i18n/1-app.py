@@ -15,6 +15,7 @@ class Config:
 
 
 app.config.from_object(Config)
+"""Treat same word routes the same regardless of an ending /"""
 app.url_map.strict_slashes = False
 babel = Babel(app)
 
