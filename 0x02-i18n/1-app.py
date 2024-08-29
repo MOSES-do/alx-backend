@@ -18,6 +18,12 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
+@babel.localeselector
+def d_locale():
+    """Returns best match of supported language"""
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+
+
 @app.route("/")
 def first_meth():
     """basic homepage"""
