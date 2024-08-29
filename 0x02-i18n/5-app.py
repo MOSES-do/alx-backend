@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Setup Babel functionality in our flask app"""
 from flask_babel import Babel
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, g
 app = Flask(__name__)
 
 
