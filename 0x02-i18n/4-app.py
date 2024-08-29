@@ -21,7 +21,9 @@ babel = Babel(app)
 
 @babel.localeselector
 def get_locale():
-    """Returns best match of supported language"""
+    """retrieves query parameter from URL - locale=fr
+         and converts it to a list = ['locale=fr']
+    """
     queries = request.query_string.decode('utf-8').split('&')
     query_table = dict(map(
         lambda x: (x if '=' in x else '{}='.format(x)).split('='),
@@ -30,6 +32,7 @@ def get_locale():
     if 'locale' in query_table:
         if query_table['locale'] in app.config["LANGUAGES"]:
             return query_table['locale']
+    """Returns best match of supported language"""
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
