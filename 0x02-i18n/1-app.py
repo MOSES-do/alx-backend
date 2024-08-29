@@ -10,7 +10,7 @@ class Config:
 
     """Babel's default locale/utc"""
     LANGUAGES = ["en", "fr"]
-    BABEL_DEFUALT_LOCALE = "en"
+    BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
 
