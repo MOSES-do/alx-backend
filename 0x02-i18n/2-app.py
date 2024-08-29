@@ -21,14 +21,14 @@ babel = Babel(app)
 
 
 @babel_localeselector
-def get_locale:i
+def get_locale:
     """Returns best match of supported language"""
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
 @app.route("/")
 def homepage():
-    ""Sites homepage"""
+    """Sites homepage"""
 
     return render_template('2-index.html')
 
